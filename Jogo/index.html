@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinhação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        #resultado {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jogo de Adivinhação</h1>
+    <p>Adivinhe um número entre 1 e 100:</p>
+    <input type="number" id="palpite" min="1" max="100">
+    <button onclick="adivinhar()">Adivinhar</button>
+    <div id="resultado"></div>
+    
+    <script>
+        const numeroSecreto = Math.floor(Math.random() * 100) + 1;
+        let tentativas = 0;
+
+        function adivinhar() {
+            const palpite = parseInt(document.getElementById('palpite').value);
+            tentativas++;
+            const resultadoDiv = document.getElementById('resultado');
+
+            if (palpite < 1 || palpite > 100 || isNaN(palpite)) {
+                resultadoDiv.innerHTML = 'Por favor, insira um número válido entre 1 e 100.';
+            } else if (palpite === numeroSecreto) {
+                resultadoDiv.innerHTML = `Parabéns! Você acertou o número ${numeroSecreto} em ${tentativas} tentativas!`;
+            } else if (palpite < numeroSecreto) {
+                resultadoDiv.innerHTML = 'Muito baixo! Tente novamente.';
+            } else {
+                resultadoDiv.innerHTML = 'Muito alto! Tente novamente.';
+            }
+        }
+    </script>
+</body>
+</html>

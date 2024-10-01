@@ -1,0 +1,29 @@
+/** empresa e area é display inline por padrao e nao aceita mudar altura e largura**/
+.empresa,
+.area {
+  background-color: aqua;
+  display: block;
+  height: 100px;
+  width: 500px;
+}
+
+/** display block por padrao **/
+.celulares {
+  background-color: blue;
+  height: 100px;
+  width: 150px;
+}
+
+.impressoras {
+  background-color: brown;
+}
+
+.computadores,
+.roteadores {
+  display: inline-block;
+  background-color: green;
+  height: 200px;
+  width: 200px;
+}
+
+/** Inline ficma na mesma linha e nao pode mexer na altura e largura, block nao mexe em nada e o inline-block fica na linha e pode mexer no tamanho**/

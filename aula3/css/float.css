@@ -1,0 +1,13 @@
+body{
+
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: justify;
+
+}
+
+/**Float é para deixar a imagem flutuando**/
+img{
+
+    float: right;
+}

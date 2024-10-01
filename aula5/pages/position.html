@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positon</title>
+    <style>
+        main{
+            position: relative;
+            background-color: rgb(245, 245, 245);
+            margin: 1.5rem 1rem;
+            padding: 1rem 2.5rem;
+
+        }
+        div{
+            font-size: 1.25rem;
+            padding: 1rem 1.5rem;
+        }
+        .static{
+            background-color: orange;
+        
+
+        }
+        .relative{
+            top: -30px;
+            margin: 0 auto;
+            width: 50%;
+            position: relative;
+            background-color: red;
+        }
+        .absolute{
+            position: absolute ;
+            background-color: blue;
+            top: 0;
+            right: 0;
+        }
+        .fixed{
+            position: fixed;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Menu Principal</h1>
+        <div class="static">
+            <p>Elemento Estático</p>
+        </div>
+        <div class="relative">
+            <p>Elemento Relativo</p>
+        </div>
+        <div class="absolute">
+            <p>Elemento Absoluto</p>
+        </div>
+        <div class="fixed">
+            <p>Elemento Fixo</p>
+        </div>
+    </main>
+</body>
+</html>

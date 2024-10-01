@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinhe a Palavra</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f4f4f4;
+        }
+        #dicas {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Adivinhe a Palavra!</h1>
+    <div id="dicas"></div>
+    <input type="text" id="palpite" placeholder="Digite sua palavra">
+    <button onclick="adivinhar()">Adivinhar</button>
+    <div id="resultado"></div>
+
+    <script>
+        const palavras = [
+            { palavra: "gato", dica: "É um animal de estimação que adora dormir." },
+            { palavra: "sol", dica: "É a estrela que ilumina nosso planeta." },
+            { palavra: "lua", dica: "É o satélite natural da Terra." },
+            { palavra: "carro", dica: "Usamos para nos locomover." },
+            { palavra: "cachorro", dica: "O melhor amigo do homem." }
+        ];
+
+        let palavraSecreta, tentativas;
+
+        function iniciarJogo() {
+            const indiceAleatorio = Math.floor(Math.random() * palavras.length);
+            palavraSecreta = palavras[indiceAleatorio].palavra;
+            document.getElementById('dicas').innerText = palavras[indiceAleatorio].dica;
+            tentativas = 3; // Número de tentativas
+            document.getElementById('resultado').innerText = '';
+            document.getElementById('palpite').value = '';
+        }
+
+        function adivinhar() {
+            const palpite = document.getElementById('palpite').value.toLowerCase();
+            tentativas--;
+
+            if (palpite === palavraSecreta) {
+                document.getElementById('resultado').innerText = `Parabéns! Você acertou a palavra: ${palavraSecreta}!`;
+            } else if (tentativas > 0) {
+                document.getElementById('resultado').innerText = `Errado! Você ainda tem ${tentativas} tentativas.`;
+            } else {
+                document.getElementById('resultado').innerText = `Game Over! A palavra era: ${palavraSecreta}.`;
+            }
+
+            document.getElementById('palpite').value = '';
+        }
+
+        // Iniciar o jogo ao carregar a página
+        window.onload = iniciarJogo;
+    </script>
+</body>
+</html>

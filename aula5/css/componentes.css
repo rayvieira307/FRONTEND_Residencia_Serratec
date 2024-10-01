@@ -1,0 +1,191 @@
+.plano {
+  /* padding: 10px; */
+  position: relative;
+  border: 1px solid #95a4a5;
+  font-size: 1rem;
+}
+
+
+
+/* .plano:last-child{
+    margin-right: 0;
+} */
+
+.plano--mais--vendido::after{
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  content: "Mais Vendido";
+  background-color: purple;
+  color: #fff;
+  font-size: 0.625em;
+  font-weight: bold;
+  line-height: 2.5;
+  padding: 0 10px;
+}
+
+.plano__cabecalho {
+  background-color: #632ba3;
+  color: #fff;
+  text-align: center;
+  line-height: 2.5;
+  /* margin: -10px; */
+  margin-bottom: 0;
+  font-size: 2em;
+}
+
+.plano__preco {
+  text-align: center;
+  font-size: 2em;
+  margin: 20px 0;
+}
+
+.plano__caracteristicas {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.plano__caracteristicas > li {
+  text-align: center;
+}
+
+.plano__rodape {
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+
+.principal{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.principal__titulo{
+    font-size: 2.25em;
+    margin: 0;
+    color: #fff;
+    text-shadow: 1px 2px #313131;
+}
+
+.principal__subtitulo{
+    margin: 60px 0;
+    color: #fff;
+}
+
+.principal__acao{
+    margin: 60px 0;
+    color: black;
+    text-align: center;
+}
+
+.botao {
+  display: inline-block;
+  background-color: #2f2461;
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+
+.botao:hover {
+  background-color: red;
+}
+
+.botao:focus {
+  background-color: orange;
+}
+
+.botao--principal, .botao--login{
+    border-radius: 10px;
+    background-color: #003b6a;
+}
+
+.botao--chaveador{
+  width: 24px;
+  height: 24px;
+  border: 0;
+  outline: none;
+  background-image: url("/aula5/img/hamburguer.png");
+
+}
+
+@media(min-width: 992px){
+  .botao--chaveador{
+    display: none;
+  }
+}
+.depoimento{
+    font-size: 1.5em;
+}
+
+.depoimento > blockquote{
+  position: relative;
+    margin: 0;
+    padding: 0 60px;
+    text-align: center;
+}
+
+.depoimento > blockquote::before{
+ 
+  position: absolute;
+  left: 0;
+  top: -0.5em;
+  font-size: 7.5em;
+  color: #ccc;
+  content:"\201C" ;
+
+}
+
+.depoimento > blockquote::after{
+ 
+  position: absolute;
+  right: 0;
+  font-size: 7.5em;
+  color: #ccc;
+  content:"\201D" ;
+
+}
+
+
+.depoimento__autor{
+    margin-top: 40px;
+    text-align: center;
+}
+
+.depoimento__autor > img {
+    border-radius: 50%;
+}
+
+.navegacao{
+
+}
+
+.navegacao_menu{
+float: right;
+}
+
+@media (max-width: 991px) {
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    border: 1px solid #eee;
+    background-color: #fbfbfb;
+    padding: 20px;
+    margin: 0;
+    font-size: 1.2rem;
+    list-style: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .menu__item {
+    display: inline-block;
+    padding-right: 20px;
+  }
+  .menu__item:last-of-type {
+    padding-right: 0px;
+  }
+}

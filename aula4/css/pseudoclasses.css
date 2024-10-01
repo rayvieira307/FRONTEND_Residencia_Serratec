@@ -1,0 +1,39 @@
+/* link não visitado */
+.meu-link:link{
+
+    color: green;
+}
+
+/*link visitado*/
+.meu-link:visited{
+    color: gold;
+}
+
+.meu-link:hover{
+
+    color: orange;
+}
+
+.disciplinas{
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: blue;
+    margin: 0;
+    padding: 0;
+}
+
+.disciplinas li{
+    color: aqua;
+    border-bottom: 2px solid #eee ;
+    padding-bottom: 5px;
+}
+/* Primeira palavra da lista*/
+.disciplinas li:first-child{
+    color: orange;
+}
+
+/*Ultima palavra da lista*/
+.disciplinas li:last-child{
+    color: rgb(255, 0, 200);
+}
